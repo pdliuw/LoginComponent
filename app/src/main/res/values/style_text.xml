@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    App theme.
+
+    -->
+    <!--AppStyleTextInputLayout -->
+    <style name="AppStyleTextInputLayout" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"></style>
+
+    <style name="TextAppearance.Shrine.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="AppStyleTextInputEditText" parent="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="android:textSize">@dimen/size_sp_16</item>
+    </style>
+
+
+    <style name="AppStyleSubmitButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_sp_16</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="AppStyleCancelButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/size_sp_16</item>
+    </style>
+
+    <style name="AppStyleStrokeButton" parent="AppStyleCancelButton">
+        <item name="android:textSize">@dimen/size_sp_12</item>
+    </style>
+
+    <style name="AppStyleTextButton" parent="AppStyleCancelButton">
+        <item name="android:textSize">@dimen/size_sp_14</item>
+        <item name="android:paddingLeft">@dimen/size_0</item>
+        <item name="android:paddingRight">@dimen/size_0</item>
+        <item name="iconPadding">@dimen/size_0</item>
+    </style>
+
+</resources>

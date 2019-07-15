@@ -1,0 +1,33 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowContentTransitions">true</item>
+
+    </style>
+
+    <!-- Light -->
+    <style name="AppTheme.AppLightTheme" parent="AppTheme">
+
+    </style>
+
+    <!-- Dark -->
+    <style name="AppTheme.AppDarkTheme" parent="AppTheme">
+        <!-- colors -->
+        <item name="android:windowBackground">@color/colorDarker</item>
+    </style>
+
+    <style name="WelcomeTheme" parent="AppTheme">
+        <item name="android:windowBackground">@mipmap/background</item>
+    </style>
+
+
+</resources>

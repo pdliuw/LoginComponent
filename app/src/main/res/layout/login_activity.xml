@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.air.logincomponent.component.login.LoginActivity">
+
+    <!--input content-->
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingBottom="250dp"
+            android:visibility="visible">
+
+            <!--Title-->
+            <LinearLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="100dp"
+                app:layout_collapseMode="parallax"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
+
+                <ImageView
+                    android:id="@+id/setup_server_address"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text=""
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Air"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="38sp" />
+            </LinearLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/phone_group"
+                style="@style/AppStyleTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_20"
+                android:layout_marginTop="@dimen/size_20"
+                android:layout_marginRight="@dimen/size_20"
+                android:hint="手机号"
+                android:transitionName="name"
+                app:counterEnabled="true"
+                app:errorEnabled="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header_layout">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/login_user_phone_et"
+                    style="@style/AppStyleTextInputEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="21"
+                    android:maxLines="1"
+                    android:textColorHint="@color/colorDimGray"
+                    android:textSize="@dimen/size_sp_16" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/password_group"
+                style="@style/AppStyleTextInputLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_20"
+                android:hint="密码"
+
+                android:transitionName="password"
+                app:counterEnabled="false"
+                app:layout_constraintLeft_toLeftOf="@id/phone_group"
+                app:layout_constraintRight_toRightOf="@id/phone_group"
+                app:layout_constraintTop_toBottomOf="@id/phone_group">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/login_user_password_et"
+                    style="@style/AppStyleTextInputEditText"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="21"
+                    android:maxLines="1"
+                    android:textColorHint="@color/colorDimGray"
+                    android:textSize="@dimen/size_sp_16" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/verification_code_btn"
+                style="@style/AppStyleCancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/size_10"
+                android:gravity="center"
+                android:text="验证码"
+                android:textAppearance="@style/AppStyleCancelButton"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/size_sp_14"
+                app:layout_constraintBottom_toBottomOf="@+id/password_group"
+                app:layout_constraintRight_toRightOf="@id/password_group"
+                app:layout_constraintTop_toTopOf="@id/password_group"
+                app:layout_constraintVertical_bias="0.5" />
+
+            <!--android:background="@drawable/btn_button_mid"-->
+            <TextView
+                android:id="@+id/go_register_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_20"
+                app:layout_constraintLeft_toLeftOf="@id/password_group"
+                app:layout_constraintTop_toBottomOf="@id/password_group" />
+
+            <!--Button-->
+
+            <!--Button-->
+            <android.support.design.button.MaterialButton
+                android:id="@+id/login_btn"
+                style="@style/AppStyleSubmitButton"
+                android:layout_marginTop="47.0dp"
+                android:layout_marginBottom="40dp"
+                android:text="登陆"
+                android:textAppearance="@style/AppStyleSubmitButton"
+                app:layout_constraintRight_toRightOf="@id/password_group"
+                app:layout_constraintTop_toBottomOf="@id/go_register_tv" />
+
+
+            <android.support.design.button.MaterialButton
+                android:id="@+id/cancel_btn"
+                style="@style/AppStyleCancelButton"
+                android:layout_marginRight="@dimen/size_10"
+                android:text="退出"
+                android:textAppearance="@style/AppStyleCancelButton"
+                app:layout_constraintRight_toLeftOf="@id/login_btn"
+                app:layout_constraintTop_toTopOf="@id/login_btn" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--Toolbar-->
+    <include
+        android:id="@+id/top"
+        layout="@layout/app_action_bar"
+        android:visibility="gone" />
+
+    <!--version-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size_10"
+        android:gravity="center"
+        android:textColor="@color/colorDarkGray"
+        android:textSize="@dimen/size_sp_12" />
+</RelativeLayout>

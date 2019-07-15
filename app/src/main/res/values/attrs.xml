@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 圆形进度TextView -->
+    <declare-styleable name="CircleProgressTextView">
+        <attr name="cp_progress" format="float" />
+        <attr name="cp_circle_paint_width" format="dimension" />
+        <attr name="cp_progress_paint_width" format="dimension" />
+    </declare-styleable>
+
+</resources>
