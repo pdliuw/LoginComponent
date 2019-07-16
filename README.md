@@ -1,20 +1,3 @@
----
-title: Android项目实战示例
-date: 2017-03-06 21:25:04
-
-img: /images/android_one_logo.jpg
-summary: Android登陆模块完整示例
-categories: Android
-tags:
-- Java
-- RxJava
-- Retrofit
-- OKHttp
-- Glide
-- MVP
-- DesignPatterns
-
----
 
 ----
 
@@ -79,9 +62,6 @@ Login Component
 
 
 #### 5.	项目地址
-
-
-[点击我查看项目](https://github.com/pdliuw/LoginComponent)
 
 
 #### 6.	TODO
