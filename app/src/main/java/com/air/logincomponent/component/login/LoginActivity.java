@@ -203,6 +203,8 @@ public class LoginActivity extends AppCommonActivity implements LoginContract.Vi
     @Override
     public void loginSuccess() {
         startActivity(new Intent(this, MainActivity.class));
+
+        finish();
 //        StartActivityFactory.startBillUnfinishedActivity(this, new Intent(this, BillUnfinishedActivity.class));
     }
 
